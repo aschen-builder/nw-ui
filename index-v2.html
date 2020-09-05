@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+    <head>
+        <title>NW Assessment - Austin Chick</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="styles/css/theme-v2.css">
+    </head>
+    <body>
+        <div class="cont">
+            <div class="side-nav">
+                <div class="avatar">
+                    <img src="img/avatar.png">
+                </div>
+
+                <ul class="nav-group">
+                    <li><i class="fas fa-bell"></i></li>
+                    <li><i class="fas fa-bookmark"></i></li>
+                    <div class="divider"></div>
+                    <li class="active"><i class="fas fa-tachometer-alt"></i></li>
+                    <li><i class="fas fa-file"></i></li>
+                    <li><i class="fas fa-map-marker-alt"></i></li>
+                    <li><i class="fas fa-upload"></i></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <div class="header">
+                    <div class="bread">
+                        <span>Site / Performance</span>
+                    </div>
+
+                    <div class="timeframe">
+                        <span class="font-weight-bold">TIMEFRAME:</span>
+                        <select>
+                            <option>LAST 7 DAYS</option>
+                            <option>LAST 14 DAYS</option>
+                            <option selected="selected">LAST 30 DAYS</option>
+                            <option>LAST 90 DAYS</option>
+                        </select>
+                    </div>
+
+                    <div class="refresh">
+                        <button><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+
+                <div class="dashboard-wrapper">
+                    <div class="dashboard">
+                        <div class="site-info">
+                            <div class="name">SITE: <span>Solar Irvine</span></div>
+
+                            <div class="details">
+                                <div class="left">
+                                    <p>LOCATION: <span>IRVINE, CA</span></p>
+                                    <p>TIME: <span>10:00 AM (UTC)</span></p>
+                                </div>
+
+                                <div class="right">
+                                    <p>TYPE: <span>SOLAR</span></p>
+                                    <p># OF ASSETS: <span>250</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="site-data">
+                            <ul role="tablist">
+                                <li style="margin-left: 1rem;">
+                                    <a class="active" data-toggle="tab" role="tab" href="#performance">PERFORMANCE</a>
+                                </li>
+                                <li>
+                                    <a class="disabled" data-toggle="tab" role="tab" href="#assets">ASSETS</a>
+                                </li>
+                                <li>
+                                    <a class="disabled" data-toggle="tab" role="tab" href="#events">EVENTS</a>
+                                </li>
+                                <li>
+                                    <a class="disabled" data-toggle="tab" role="tab" href="#history">HISTORY</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content w-100">
+                                <div id="performance" role="tabpanel">
+                                    <div class="row">
+                                        <div class="overview">
+                                            <div class="card-header">
+                                                <span class="mr-2">OVERVIEW</span>
+
+                                                <select>
+                                                    <option>LAST 7 DAYS</option>
+                                                    <option>LAST 14 DAYS</option>
+                                                    <option selected="selected">LAST 30 DAYS</option>
+                                                    <option>LAST 90 DAYS</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <div class="metric btn btn-primary">
+                                                    <p class="m-name">ASSETS</p>
+                                                    <p class="m-value">250</p>
+                                                </div>
+                                                <div class="metric btn btn-secondary">
+                                                    <p class="m-name">CAPACITY</p>
+                                                    <p class="m-value">1.23 GWh</p>
+                                                </div>
+                                                <div class="metric btn btn-success">
+                                                    <p class="m-name">LOREM IPSUM</p>
+                                                    <p class="m-value">1.10 GWh</p>
+                                                </div>
+                                                <div class="metric btn btn-danger">
+                                                    <p class="m-name">LOREM IPSUM</p>
+                                                    <p class="m-value">0.13 GWh</p>
+                                                </div>
+                                                <div class="metric btn btn-warning">
+                                                    <p class="m-name">LOREM IPSUM</p>
+                                                    <p class="m-value">15 Assets</p>
+                                                </div>
+                                                <div class="metric btn btn-danger">
+                                                    <p class="m-name">LOREM IPSUM</p>
+                                                    <p class="m-value">45 Events</p>
+                                                </div>
+                                                <div class="metric btn btn-info">
+                                                    <p class="m-name">LOREM IPSUM</p>
+                                                    <p class="m-value">25 Events</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="esi-wrapper">
+                                            <div class="esi-1">
+                                                <div class="card-header">
+                                                    <select>
+                                                        <option>LAST 7 DAYS</option>
+                                                        <option>LAST 14 DAYS</option>
+                                                        <option selected="selected">LAST 30 DAYS</option>
+                                                        <option>LAST 90 DAYS</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <div class="asset-card">
+                                                        <span class="icon-cont">
+                                                            <i class="fas fa-tachometer-alt"></i>
+                                                        </span>
+                                                        <span class="title"></span>
+                                                        <span class="asset-count">15</span>
+                                                    </div>
+
+                                                    <div class="asset-card">
+                                                        <span class="icon-cont">
+                                                            <i class="fas fa-tachometer-alt"></i>
+                                                        </span>
+                                                        <span class="title"></span>
+                                                        <span class="asset-count">15</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="esi-1">
+                                                <div class="card-header">
+                                                    <select>
+                                                        <option>LAST 7 DAYS</option>
+                                                        <option>LAST 14 DAYS</option>
+                                                        <option selected="selected">LAST 30 DAYS</option>
+                                                        <option>LAST 90 DAYS</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <span class="text-success" style="font-size: 8.5rem">45</span>
+                                                    <span class="font-weight-bold">LOREM IPSUM</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="esi-2">
+                                                <div class="card-header">
+                                                    <select>
+                                                        <option>LAST 7 DAYS</option>
+                                                        <option>LAST 14 DAYS</option>
+                                                        <option selected="selected">LAST 30 DAYS</option>
+                                                        <option>LAST 90 DAYS</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="card-body">
+                                                    <span class="text-danger" style="font-size: 8.5rem">214</span>
+                                                    <span class="font-weight-bold">LOREM IPSUM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-center" style="flex-wrap: wrap !important;">
+                                        <div class="assets">
+                                            <div class="card-header">
+                                                <select>
+                                                    <option>LAST 7 DAYS</option>
+                                                    <option>LAST 14 DAYS</option>
+                                                    <option selected="selected">LAST 30 DAYS</option>
+                                                    <option>LAST 90 DAYS</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col" class="text-left">ASSET</th>
+                                                            <th scope="col">CAPACITY</th>
+                                                            <th scope="col">ENERGY</th>
+                                                            <th scope="col" class="text-right">VIEW</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="asset-row">
+                                                            <th scope="row">Solar-001</th>
+                                                            <td>2.5 MW</td>
+                                                            <td class="text-danger">1.6 MW</td>
+                                                            <td class="view">
+                                                                <button>VIEW</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="asset-row">
+                                                            <th scope="row">Solar-002</th>
+                                                            <td>2.5 MW</td>
+                                                            <td class="text-danger">1.6 MW</td>
+                                                            <td class="view">
+                                                                <button>VIEW</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="asset-row">
+                                                            <th scope="row">Solar-003</th>
+                                                            <td>2.5 MW</td>
+                                                            <td class="text-danger">1.6 MW</td>
+                                                            <td class="view">
+                                                                <button>VIEW</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="asset-row">
+                                                            <th scope="row">Solar-004</th>
+                                                            <td>2.5 MW</td>
+                                                            <td class="text-danger">1.6 MW</td>
+                                                            <td class="view">
+                                                                <button>VIEW</button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="asset-row">
+                                                            <th scope="row">Solar-005</th>
+                                                            <td>2.5 MW</td>
+                                                            <td class="text-danger">1.6 MW</td>
+                                                            <td class="view">
+                                                                <button>VIEW</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="detection">
+                                            <div class="card-header">
+                                                <select>
+                                                    <option>LAST 7 DAYS</option>
+                                                    <option>LAST 14 DAYS</option>
+                                                    <option selected="selected">LAST 30 DAYS</option>
+                                                    <option>LAST 90 DAYS</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="card-body">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr class="text-left">
+                                                            <th scope="col">STATUS</th>
+                                                            <th scope="col" colspan="2">DETECTED</th>
+                                                            <th scope="col">TIMEFRAME</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="detection-row">
+                                                            <th scope="row">
+                                                                <span class="badge-danger">ACTIVE</span>
+                                                            </th>
+                                                            <td class="energy" colspan="2">Icing Detected</td>
+                                                            <td class="time">
+                                                                <span class="start">12/07/2016 06:03:00 AM UTC</span>
+                                                                <span class="start">END: <a href="#">ONGOING</a></span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="detection-row">
+                                                            <th scope="row">
+                                                                <span class="badge-text">INACTIVE</span>
+                                                            </th>
+                                                            <td class="energy" colspan="2">Icing Detected</td>
+                                                            <td class="time">
+                                                                <span class="start">12/07/2016 06:03:00 AM UTC</span>
+                                                                <span class="start">END: <a href="#">ONGOING</a></span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="detection-row">
+                                                            <th scope="row">
+                                                                <span class="badge-lightgray disabled" style="color: #6F6F6F;">ARCHIVED</span>
+                                                            </th>
+                                                            <td class="energy" colspan="2">Icing Detected</td>
+                                                            <td class="time">
+                                                                <span class="start">12/07/2016 06:03:00 AM UTC</span>
+                                                                <span class="start">END: <a href="#">ONGOING</a></span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="detection-row">
+                                                            <th scope="row">
+                                                                <span class="badge-lightgray disabled" style="color: #6F6F6F;">ARCHIVED</span>
+                                                            </th>
+                                                            <td class="energy" colspan="2">Icing Detected</td>
+                                                            <td class="time">
+                                                                <span class="start">12/07/2016 06:03:00 AM UTC</span>
+                                                                <span class="start">END: <a href="#">ONGOING</a></span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="detection-row">
+                                                            <th scope="row">
+                                                                <span class="badge-lightgray disabled" style="color: #6F6F6F;">ARCHIVED</span>
+                                                            </th>
+                                                            <td class="energy" colspan="2">Icing Detected</td>
+                                                            <td class="time">
+                                                                <span class="start">12/07/2016 06:03:00 AM UTC</span>
+                                                                <span class="start">END: <a href="#">ONGOING</a></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="assets" role="tabpanel"></div>
+
+                                <div id="events" role="tabpanel"></div>
+
+                                <div id="history" role="tabpanel"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,472 @@
+// OVERRIDE BOOTSTRAP VARIABLES
+@import 'node_modules/bootstrap/scss/mixins.scss';
+@import url(https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap);
+
+$fa-font-path: '../../node_modules/@fortawesome/fontawesome-free/webfonts' !default;
+
+$titillium: 'Titillium Web', sans-serif;
+
+$enable-responsive-font-sizes: true !important;
+
+$gray: #D5D5D5;
+$gray-light: #F3F3F3;
+$gray-dark:  #6F6F6F;
+
+$theme-colors: (
+    'primary': #1BA9C7,
+    'secondary': #9D86FF,
+    'success': #34DD50,
+    'warning': #FBA835,
+    'danger': #FF6775,
+    'info': $gray-dark,
+    'nav': #003442,
+    'icons': #66AAB5,
+    'text': #868686,
+    'lightgray': $gray-light
+);
+
+$body-color: #868686;
+
+$grid-gutter-width: 0;
+
+$breadcrumb-bg: white;
+$breadcrumb-divider-color: $body-color;
+$breadcrumb-active-color: $body-color;
+$breadcrumb-border-radius: 0;
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+// TEMP VARS
+%flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+%time-select {
+    @extend .btn;
+    @extend .font-weight-bold;
+
+    font-weight: bold;
+    padding: .25rem;
+}
+
+%time-select-gray {
+    @extend .ml-auto;
+
+    background-color: white;
+    border: 1px solid $gray;
+}
+
+// ADJUST ROOT
+html,
+body {
+    margin: 0;
+    height: 100%;
+    font-family: $titillium !important;
+    color: theme-color('text');
+    background-color: white;
+}
+
+
+// SITE CONTAINER
+.cont {
+    @extend .d-flex;
+
+    min-height: 100%;
+}
+
+// SIDE NAVIGATION BAR
+.side-nav {
+    @extend .pt-1;
+    @extend .d-flex;
+
+    flex-direction: column;
+    align-items: center;
+    background-color: theme-color('nav');
+    color: theme-color('icons');
+
+    .avatar {
+        padding: 1rem;
+
+        img {
+            @extend .img-fluid;
+
+            width: 3rem;
+        }
+    }
+
+    .nav-group {
+        @extend .list-group;
+        @extend .w-100;
+
+        .change {
+            background-color: theme-color('primary');
+            color: white;
+            border-left: .25rem solid theme-color-level('primary', 1);
+            border-radius: 0;
+            padding-left: 1rem;
+        }
+
+        li {
+            @extend .list-group-item;
+            @extend .list-group-item-action;
+            @extend .text-center;
+
+            background-color: theme-color('nav');
+            color: theme-color('icons');
+            border: none;
+            font-size: 1.25rem;
+
+            &:hover {
+                @extend .change;
+            }
+        }
+
+        li.active {
+            @extend .change;
+        }
+
+        .divider {
+            margin: .5rem .5rem 1rem .5rem;
+            border: 0;
+            border-top: 1px solid #2C5763;
+        }
+    }
+}
+
+// DATA AND CONTENT
+.content {
+    -webkit-flex: 4;
+    flex: 4;
+
+    // CONTENT HEADER
+    .header {
+        @extend .row;
+        @extend .py-2;
+
+        padding: 0 1.25rem 0 1.25rem;
+
+        .bread {
+            @extend .d-flex;
+            @extend %flex-center;
+        }
+
+        .timeframe {
+            @extend .d-flex;
+            @extend %flex-center;
+
+            padding: .5rem;
+            margin-left: auto;
+            background-color: $gray-light;
+            border: 1px solid $gray;
+            border-radius: $border-radius;
+
+            span {
+                margin-right: .25rem;
+            }
+
+            select {
+                @extend %time-select;
+                @extend .btn-primary;
+            }
+        }
+
+        .refresh {
+            padding: .5rem;
+
+            button {
+                @extend .btn;
+                @extend .btn-primary;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            font-size: .75rem;
+        }
+    }
+
+    // DATA DASHBOARD
+    .dashboard-wrapper {
+        @extend .d-flex;
+        @extend %flex-center;
+
+        background-color: #E4E7EE;
+        padding: 1rem;
+    }
+
+    .dashboard {
+        background-color: white;
+        border-radius: $border-radius;
+
+        .site-info {
+            @extend .row;
+            @extend .alert;
+            @extend .py-4;
+
+            flex-direction: column;
+            margin: 1rem;
+            background-color: #F5FDFF;
+            color: theme-color('primary');
+            border: 1px solid #DEF0F4;
+
+            .name {
+                @extend .h5;
+
+                margin-bottom: 0;
+
+                span { @extend .font-weight-bold; }
+            }
+
+            .details {
+                @extend .row;
+                
+                color: $gray-dark;
+
+                p { @extend .mb-0; }
+                
+                .left, .right { 
+                    @extend .col-sm-auto;
+
+                    span { @extend .font-weight-bold }
+                }
+
+                .left {
+                    padding-right: .5rem;
+                    border-right: 1px solid #B1DDE8;
+                }
+
+                .right {
+                    padding-left: .5rem;
+                }
+            }
+        }
+
+        .site-data {
+            @extend .row;
+
+            margin-bottom: 1rem;
+
+            ul {
+                @extend .nav, .nav-tabs;
+
+                width: 100%;
+
+                li {
+                    @extend .nav-item;
+
+                    margin-left: .5rem;
+                    margin-right: .5rem;
+
+                    a { 
+                        @extend .nav-link;
+                        @extend .ml-0;
+                    }
+
+                    a.disabled {
+                        background-color: $gray;
+                    }
+                }
+
+                @media only screen and (max-width: 600px) {
+                    font-size: .5rem;
+                }
+
+                // could use nth child to get last 3 li and change but...
+            }
+
+            #performance, #assets, #events, #history {
+                @extend .tab-pane;
+                @extend .container-fluid;
+            }
+
+            #performance {
+                @extend .active;
+                @extend .show;
+
+                .card-header {
+                    @extend .d-flex;
+                    
+                    align-items: center;
+                    font-weight: bold;
+
+                    select {
+                        @extend %time-select;
+                        @extend %time-select-gray;
+                    }
+                }
+
+                .card-body {
+                    @extend .d-flex;
+                    @extend %flex-center;
+
+                    flex-wrap: wrap;                        
+                    padding: 0;
+                }
+
+                %custom-card {
+                    border-bottom: 3px solid transparentize($color: #000000, $amount: 0.7);
+                    box-shadow: 0px 0px 12px $gray-light;
+                }
+
+                .overview {
+                    @extend .card;
+                    @extend .w-100;
+
+                    margin: 1rem;
+
+                    .metric {
+                        @extend %custom-card;
+
+                        flex: 1 1 auto;
+                        margin: 1rem;
+                        padding: 1rem;
+                        text-align: left;
+                        color: white;
+    
+                        p { @extend .mb-0; }
+    
+                        .m-name { 
+                            @extend .font-weight-bold;
+                            
+                            color: transparentize($color: white, $amount: 0.3);
+                        }
+    
+                        .m-value { font-size: 2rem; }
+                    }
+                }
+
+                .esi-wrapper { 
+                    @extend .d-flex;
+                    @extend .w-100;
+
+                    flex-flow: row wrap;
+                }
+
+                .esi-1, .esi-2 {
+                    @extend .card;
+
+                    margin: 1rem;
+
+                    .card-header { &:before { content: 'EVENT STATS & INSIGHTS'} }
+
+                    .card-body {
+                        @extend .m-5;
+
+                        flex-direction: column;
+
+                        .asset-card {
+                            @extend .d-flex;
+                            @extend .btn;
+                            @extend .align-items-start;
+                            @extend .py-3;
+                            @extend .my-3;
+
+                            flex-flow: column wrap;                            
+                            background-color: $gray-light;
+                            border: 1px solid $gray;
+                            border-bottom: 3px solid transparentize($color: #000000, $amount: 0.7);
+
+                            i {
+                                background-color: $gray;
+                                color: $gray-dark;
+                                padding: .25rem;
+                                border-radius: $border-radius;
+                            }
+
+                            span.title {
+                                font-weight: bold;
+
+                                &:before { content: 'ASSET W/ PERFORMANCE ISSUES' }
+                            }
+
+                            span.asset-count { &:after { content: ' ASSETS' } }
+                        }
+                    }
+                }
+
+                .esi-1 {
+                    flex: 1 1 auto;
+                }
+
+                .esi-2 {
+                    flex: 2 1 auto;
+                }
+
+                %table-card {
+                    @extend .card;
+                    
+                    flex-grow: 1;
+                    margin: 1rem;
+
+                    .card-body { 
+                        @extend .text-center;
+
+                        padding: 1rem;
+
+                        th { border-top: none; }
+                    }
+                }
+
+                .assets {
+                    @extend %table-card;
+
+                    .card-header { &:before { content: 'ASSETS'} }
+
+                    .asset-row {
+                        th { 
+                            text-align: left;
+                            font-weight: normal;
+                            border-bottom: 1px solid #dee2e6;
+                        }
+                        
+                        .view { 
+                            text-align: right;
+
+                            button {
+                                @extend .btn, .btn-info, .font-weight-bold;
+                            }
+                        }
+                    }
+                }
+
+                .detection {
+                    @extend %table-card;
+
+                    .card-header { &:before { content: 'DETECTION'} }
+
+                    .detection-row {
+                        text-align: left;
+
+                        th {
+                            text-align: left;
+                            font-weight: normal;
+                            border-bottom: 1px solid #dee2e6;
+
+                            span {
+                                @extend .badge;
+                                @extend .badge-pill;
+
+                                width: 5rem;
+                                font-weight: bold;
+                                color: white;
+                            }
+                        }
+
+                        .time {
+                            @extend .d-flex;
+
+                            flex-flow: column wrap;
+
+                            .start { &:before { content: 'START:'; font-weight: bold; } }
+                            .end { &:before { content: 'END:'; font-weight: bold; } }
+
+                            a { text-decoration: underline; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
